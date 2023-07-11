@@ -29,10 +29,9 @@ class Timezone:
 
 
     def display_timezones(self, timezones):
-        timezones_list = []
         if len(timezones) == 0:
             print("No time zones found matching the criteria.")
-            return timezones_list
+            return self.timezones_list
         else:
             for tz in timezones:
                 data = {
@@ -43,8 +42,8 @@ class Timezone:
                     "Timezone Description": tz['text'],
                     "Timezone UTC": tz['utc']
                 }
-                timezones_list.append(data)
-            return timezones_list
+                self.timezones_list.append(data)
+            return self.timezones_list
 
 
     def main(self):
