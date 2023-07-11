@@ -58,6 +58,7 @@ def main():
 
 if __name__ == '__main__':
     timezones_list = main()
+    print("Time Zones:-")
     for value in timezones_list:
         print(value, end="\n")
         print()
